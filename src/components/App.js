@@ -21,7 +21,7 @@ const App = () => {
                     size={animal.size}
                     diet={animal.diet}
                     additional={animal.additional}
-                    showAdditonal={showAdditonal}
+                    showAdditional={showAdditonal}
                 />
             ))}
         </div>
