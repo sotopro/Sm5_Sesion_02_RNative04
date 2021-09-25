@@ -1,5 +1,8 @@
 import './App.css';
 // import emojiList from './data/emojis.json';
+// import Instruction from './components/Instruction';
+import Instruction from './components/functional/instruction';
+// import Instruction from './components/class/instruction';
 import { emojis } from './utils/constants/emojis';
 const isLoggedIn = true;
 
@@ -9,7 +12,7 @@ const App = ()  => {
   return (
     <div className="container">
       <h1 id={greeting}>Hello World</h1>
-      <p>I am Wrinting JSX</p>
+      <Instruction text='Click on an emoji to view the emoji name.' />
       {isLoggedIn && (
         <ul>
         {emojis.map(emoji => (

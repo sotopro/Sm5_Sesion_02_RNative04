@@ -1,0 +1,12 @@
+.instruction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.instruction {
+    font-size: 1.2em;    
+}
