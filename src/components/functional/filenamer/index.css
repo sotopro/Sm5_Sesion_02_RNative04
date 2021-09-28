@@ -23,7 +23,7 @@
     padding-top: 16px;
 }
 
-.wrapper button {
+.wrapper .save {
     background: #212121;
     color: #ffffff;
     border: none;
@@ -34,11 +34,11 @@
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
 }
 
-.wrapper button:active {
+.wrapper .save:active {
    outline: none;
 }
 
-.wrapper button:hover {
+.wrapper .save:hover {
     background: #ffffff;
     color: #212121;
     border: 1px solid #212121;
@@ -62,3 +62,40 @@ form label input {
     font-size: 0.9em;
     font-weight: 500;
 }
+
+.information-wrapper {
+    padding-top: 20px;
+}
+
+.information {
+    font-size: 0.75em;
+    color: #ffffff;
+    cursor: pointer;
+    background: #2e8dc4;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    border-radius: 4px;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+
+.information:active {
+    outline: none;
+ }
+ 
+.information:hover {
+    background: #ffffff;
+    color: #2e8dc4;
+    border: 1px solid #2e8dc4;
+    font-weight: 700;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+ }
+
+ .popup {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #2e8dc4;
+    padding: 10px;
+    top: 143px;
+    left: 40px;
+ }
