@@ -1,0 +1,64 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.preview {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.preview h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.button-container {
+    padding-top: 16px;
+}
+
+.wrapper button {
+    background: #212121;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 0.8em;
+    width: 250px;
+    border-radius: 4px;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+
+.wrapper button:active {
+   outline: none;
+}
+
+.wrapper button:hover {
+    background: #ffffff;
+    color: #212121;
+    border: 1px solid #212121;
+    font-weight: 700;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+
+form label p {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #212121;
+}
+
+form label input {
+    border: none;
+    border-bottom: 1px solid #212121;
+    outline: none;
+    background: none;
+    width: 250px;
+    color: #212121;
+    font-size: 0.9em;
+    font-weight: 500;
+}
