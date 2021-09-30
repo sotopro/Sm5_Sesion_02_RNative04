@@ -3,8 +3,14 @@
 }
 
 .product-container {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     font-size: 20px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .product-container button {
@@ -12,4 +18,8 @@
     background-color: #212121;
     color: #fff;
     padding: 10px;
+}
+
+.product {
+    
 }

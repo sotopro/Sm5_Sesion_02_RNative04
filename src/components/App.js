@@ -14,7 +14,6 @@ const App = () => {
     // }
     return (
         <div className="container">
-            <h1>Products</h1>
             <Product />
             {/* <FileNamer /> */}
             {/* {animals.map(animal => (
