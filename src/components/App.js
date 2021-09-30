@@ -2,7 +2,8 @@ import React from 'react';
 // import AnimalCard from './functional/animalcard';
 // import { animals } from '../data/animals';
 // import FileNamer from './functional/filenamer';
-import Product from './class/product';
+// import Product from './class/product';
+import Product from './functional/product';
 import './App.css';
 
 const App = () => {
