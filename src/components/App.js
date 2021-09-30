@@ -1,7 +1,8 @@
 import React from 'react';
 // import AnimalCard from './functional/animalcard';
 // import { animals } from '../data/animals';
-import FileNamer from './functional/filenamer';
+// import FileNamer from './functional/filenamer';
+import Product from './class/product';
 import './App.css';
 
 const App = () => {
@@ -13,8 +14,9 @@ const App = () => {
     // }
     return (
         <div className="container">
-            <h1>Create File Namer</h1>
-            <FileNamer />
+            <h1>Products</h1>
+            <Product />
+            {/* <FileNamer /> */}
             {/* {animals.map(animal => (
                  <AnimalCard 
                     key={animal.name}
