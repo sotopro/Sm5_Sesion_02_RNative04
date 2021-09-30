@@ -3,8 +3,7 @@ import './index.css'
 import { products } from '../../../data/products';
 export default class Product extends Component {
     state = {
-        cart: [],
-        total: 0
+        cart: []
     }
 
     currecyOptions = {
@@ -12,22 +11,29 @@ export default class Product extends Component {
         maximumFractionDigits: 2
     }
 
+    getTotal = () => {
+        const total = this.state.cart.reduce((totalCost, item) => totalCost + item.price, 0);
+        return total.toLocaleString('en-US', this.currecyOptions)
+    }
+
     add = (product) => {
         this.setState(state => ({
-            cart: [...state.cart, product.name],
-            total: state.total + product.price
+            cart: [...state.cart, product],
         }))
     }
 
-    remove = () => {
-        this.setState({
-            cart: [],
-            total: 0
+    remove = (product) => {
+        this.setState(state => {
+            const cart = [...state.cart];
+            const productIndex = cart.findIndex(p => p.name === product.name);
+            if(productIndex < 0) {
+                return;
+            }
+            cart.splice(productIndex, 1)
+            return ({
+                cart
+            })
         })
-    }
-
-    getTotal = () => {
-        return this.state.total.toLocaleString('en-US', this.currecyOptions)
     }
     
     render() {
@@ -44,7 +50,7 @@ export default class Product extends Component {
                                 <span role="img" aria-label={product.name}>{product.emoji}</span>
                                 <div>
                                     <button onClick={() => this.add(product)}>Add</button>
-                                    <button onClick={this.remove}>Remove</button>
+                                    <button onClick={() => this.remove(product)}>Remove</button>
                                 </div>
                             </div>
                         </div>
