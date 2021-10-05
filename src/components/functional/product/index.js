@@ -1,4 +1,4 @@
-import React, {useState, useReducer} from 'react'
+import React, {useReducer} from 'react'
 import './index.css'
 import { products } from '../../../data/products';
 
