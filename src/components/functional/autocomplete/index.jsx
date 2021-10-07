@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input, Suggestion, NoSuggestions } from './style';
 
 export default class AutoComplete extends Component {
     constructor(props) {
@@ -57,7 +58,8 @@ export default class AutoComplete extends Component {
                 activeSuggestion: activeSuggestion + 1
             });
         }
-    } 
+    }
+
     render(){
         const {
             onChange,
@@ -76,7 +78,7 @@ export default class AutoComplete extends Component {
         if(showSuggestions && userInput) {
             if(filteredSuggestions.length) {
                 suggestionListComponent = (
-                    <ul className="suggestions">
+                    <Suggestion>
                         {filteredSuggestions.map((suggestion, index) => {
                             let className;
 
@@ -91,19 +93,19 @@ export default class AutoComplete extends Component {
                                 </li>
                             );
                         })}
-                    </ul>
+                    </Suggestion>
                 )
             } else {
                 suggestionListComponent = (
-                    <div className="no-suggestions">
+                    <NoSuggestions>
                         <em>No suggestions available</em>
-                    </div>
+                    </NoSuggestions>
                 )
             }
         }
         return (
             <>
-                <input 
+                <Input 
                     type="text"
                     onChange={onChange}
                     onKeyDown={onKeyDown}
