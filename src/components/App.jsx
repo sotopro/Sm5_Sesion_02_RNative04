@@ -4,7 +4,7 @@ import AutoComplete from './functional/autocomplete';
 const App = () => {
     return (
         <div className="App">
-            <AutoComplete />
+            <AutoComplete suggestions={['Apples', 'Banana', 'Pinaple', 'Mango']} />
         </div>
     )
 }

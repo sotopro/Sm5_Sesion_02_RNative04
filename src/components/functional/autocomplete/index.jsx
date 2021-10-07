@@ -72,6 +72,35 @@ export default class AutoComplete extends Component {
         } = this;
 
         let suggestionListComponent;
+
+        if(showSuggestions && userInput) {
+            if(filteredSuggestions.length) {
+                suggestionListComponent = (
+                    <ul className="suggestions">
+                        {filteredSuggestions.map((suggestion, index) => {
+                            let className;
+
+                            // Flag the active suggestion with a class
+
+                            if(index === activeSuggestion) {
+                                className = 'suggestion-active';
+                            }
+                            return (
+                                <li className={className} key={suggestion} onClick={onClick}>
+                                    {suggestion}
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )
+            } else {
+                suggestionListComponent = (
+                    <div className="no-suggestions">
+                        <em>No suggestions available</em>
+                    </div>
+                )
+            }
+        }
         return (
             <>
                 <input 
@@ -80,7 +109,7 @@ export default class AutoComplete extends Component {
                     onKeyDown={onKeyDown}
                     value={userInput}
                 />
-                {/* {suggestionListComponent} */}
+                {suggestionListComponent}
             </>
         )
     }
