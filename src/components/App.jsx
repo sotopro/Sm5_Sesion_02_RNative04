@@ -6,6 +6,7 @@ import Login from './pages/login';
 import Todos from './pages/todos';
 import useToken from './hooks/usetoken';
 import { AppContainer } from './style'
+import Countdown from './pages/countdown';
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/preferences" component={Preferences} />
                     <Route path="/todos" component={Todos} />
+                    <Route path="/countdown" component={Countdown} />
                 </Switch>
             </BrowserRouter>
         </AppContainer>
