@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
 import Preferences from './pages/preferences';
 import Login from './pages/login';
+import Todos from './pages/todos';
 import useToken from './hooks/usetoken';
+import { AppContainer } from './style'
 
 
 const App = () => {
@@ -32,16 +34,17 @@ const App = () => {
         return <Login setToken={setToken} />
     }
     return (
-        <div className="App">
+        <AppContainer>
             <h1>Application</h1>
             <button onClick={(e) => handleSubmit(e)}>Logout</button>
             <BrowserRouter>
                 <Switch>
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/preferences" component={Preferences} />
+                    <Route path="/todos" component={Todos} />
                 </Switch>
             </BrowserRouter>
-        </div>
+        </AppContainer>
     )
 }
 
